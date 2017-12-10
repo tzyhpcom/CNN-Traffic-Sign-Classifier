@@ -65,33 +65,23 @@ My final model consisted of the following layers:
 | Layer         	|     Description	        		| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         	| 32x32x1 gray image   				| 
-
 | Convolution 1x1     	| 1x1 stride, valid padding, outputs 32x32x16 	|
 | RELU			|						|
-
 | Convolution 5x5	| 1x1 stride, valid padding, outputs 28x28x32   |
 | RELU			|						|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x32 		|
-
 | Convolution 1x1     	| 1x1 stride, valid padding, outputs 14x14x32 	|
 | RELU			|						|
-
 | Convolution 5x5	| 1x1 stride, valid padding, outputs 10x10x64   |
 | RELU			|						|
 | Max pooling	      	| 2x2 stride,  outputs 5x5x64 		        |
-
-
 | Convolution 1x1     	| 1x1 stride, valid padding, outputs 5x5x64 	|
 | RELU			|						|
-
 | Flatten	| conv4+conv5, outputs 3200       		|
 | Dropout		| keep_prob 0.5					|
-
 | Fully connected	| conv4+conv5, outputs 128       		|
 | RELU   		|         					|
 | Dropout		| keep_prob 0.5					|
-
-
 | Logits        	| outputs 43     				|
 
  
