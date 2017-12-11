@@ -94,8 +94,14 @@ AdamOptimizer
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.  
   
 My final model results were:  
-EPOCH 100 Valid Acc: 0.987 Train Acc: 1.000 TrainLoss: 0.0299719477  
+EPOCH 100  
+Valid Acc: 0.987  
+Train Acc: 1.000  
+TrainLoss: 0.0299719477  
 Test Accuracy = 0.971  
+<img src="loss.jpg">  
+<img src="acc.jpg">  
+
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?  
@@ -122,8 +128,12 @@ I will try Alex net transfer learning for feature extraction later.
 
 ### Test a Model on New Images
   
-I screenshot 35 traffic sign images from a video on youtube.Some images may not belong to the 43 classes. So I skip this step and just output top 5 softmax probabilities class images for compare.  
-The performance and analysis is shown in ipynb and html  
+I screenshot 35 traffic sign images from a video on youtube.Some images may not belong to the 43 classes.  
+<img src="all_new.jpg">  
+Output top 5 softmax probabilities class images for compare.  
+<img src="test_on_new.jpg">  
+
+In the 35 new images, 25 images are classified properly, 10 are not belong to dataset classes. So the accuracy on new images is about 100%. It's pretty good. So I think my model works just fine on new images.  
 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
