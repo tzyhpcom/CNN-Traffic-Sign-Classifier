@@ -39,16 +39,21 @@ Number of classes = 43
 Here is an exploratory visualization of the data set.   
 <img src="train_size.jpg">
 <img src="valid_size.jpg">
-<img src="test_size.jpg">
+<img src="test_size.jpg">  
+
 All classes is shown below.  
-<img src="all_classes.jpg">
+<img src="all_classes.jpg">  
 
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)  
 
-In preprocessing step, I use cv2.equalizeHist(cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) for grayscaling and adding image contrast, then all data should minus X_train mean valve and divided by X_train stdvar for normalization. As for augmented data, I use rotation, translation, warpAffine, scaling and brightness adjusted and add up to at least 1000 images for each class. 
-The processing is shown in ipynb and html.  
+In preprocessing step, I use cv2.equalizeHist(cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) and normalization.  
+cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) is for grayscaling, which is suitable for my modle input.  
+equalizeHist if for increasing image contrast.  
+All data should minus X_train mean valve and divided by X_train stdvar for normalization, because it can rescale data to -1~1, which will be suitable for W's scope and make network easily trained.  
+As for augmented data, I use rotation, translation, warpAffine, scaling and brightness adjusted and add up to at least 1000 images for each class.  
+<img src="augmented_train_size.jpg">  
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.  
 
