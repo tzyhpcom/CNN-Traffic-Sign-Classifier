@@ -36,10 +36,12 @@ Number of classes = 43
 
 #### 2. Include an exploratory visualization of the dataset.  
 
-Here is an exploratory visualization of the data set. 
+Here is an exploratory visualization of the data set.   
 <img src="train_size.jpg">
 <img src="valid_size.jpg">
 <img src="test_size.jpg">
+All classes is shown below.  
+<img src="all_classes.jpg">
 
 ### Design and Test a Model Architecture
 
