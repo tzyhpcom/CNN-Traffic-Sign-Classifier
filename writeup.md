@@ -108,7 +108,7 @@ If an iterative approach was chosen:
 I choose Lenet, because it is excellent for mnist dataset.  
   
 * What were some problems with the initial architecture?  
-With lenet I only get about 0.7 on test dataset.  
+With lenet I only get about 0.7 on test dataset, but above 0.9 on train data. I think Lenet is easily overfitting without dropout and L2 norm.  
   
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.  
 Add more Convolution layer，especially 1 by 1 layer, and reduce full connection layer size to 1 and reduce it's number of neuron. Use max pooling and dropout to avoid overfitting.   
@@ -128,8 +128,8 @@ I will try Alex net transfer learning for feature extraction later.
 
 ### Test a Model on New Images
   
-I screenshot 35 traffic sign images from a video on youtube.Some images may not belong to the 43 classes.  
-<img src="all_new.jpg">  
+I screenshot 35 traffic sign images from a video on youtube. It it dark and rainning when driving. And the size of image is different from each other because I screenshot really randomly about the size. And some images may not belong to the 43 classes, such as 1st, 6th, 15th, 16th and so on. For 4 and 10, they have rain drop on the image. For 5, 11, 25 and 16, they are a little dark. For 17, 20 and 33, they are shifted and rotated. They may all difficult for the model to classify.  
+<img src="all_new.jpg">  
 Output top 5 softmax probabilities class images for compare.  
 <img src="test_on_new.jpg">  
 
