@@ -48,9 +48,13 @@ All classes is shown below.
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)  
 
-In preprocessing step, I use cv2.equalizeHist(cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) and normalization.  
-cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) is for grayscaling, which is suitable for my modle input.  
-equalizeHist if for increasing image contrast.  
+In preprocessing step, I use cv2.equalizeHist(cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) and normalization. Select 5 original images randomly and show below.  
+<img src="preprocess_ori.jpg">  
+cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) is for grayscaling, which is suitable for my modle input. And grayscaling would help to minimize the effect of differing saturation of colors, such as dark night and varying light conditions.  
+<img src="preprocess_gray.jpg">  
+equalizeHist can improve the contrast in an image, in order to stretch out the intensity range. And the texture of image will be more clear than before, it can be seen from below images after equalizeHist.  
+<img src="preprocess_equalizehist.jpg"> 
+
 All data should minus X_train mean valve and divided by X_train stdvar for normalization, because it can rescale data to -1~1, which will be suitable for W's scope and make network easily trained.  
 As for augmented data, I use rotation, translation, warpAffine, scaling and brightness adjusted and add up to at least 1000 images for each class.  
 <img src="augmented_train_size.jpg">  
