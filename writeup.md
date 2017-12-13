@@ -86,7 +86,7 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.  
   
-EPOCHS = 100  
+EPOCHS = 1000  
 BATCH_SIZE = 128  
 Laarning_rate = 0.0009  
 AdamOptimizer  
@@ -94,11 +94,12 @@ AdamOptimizer
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.  
   
 My final model results were:  
-EPOCH 100  
-Valid Acc: 0.987  
+EPOCH 1000  
+Valid Acc: 0.993  
 Train Acc: 1.000  
-TrainLoss: 0.0299719477  
-Test Accuracy = 0.971  
+Loss: 0.0074108435  
+Test Accuracy = 0.973  
+  
 <img src="loss.jpg">  
 <img src="acc.jpg">  
 
